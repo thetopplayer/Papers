@@ -51,6 +51,7 @@ class MasterViewController: UICollectionViewController {
     let sectionHeaderView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as SectionHeaderView
     if let title = papersDataSource.titleForSectionAtIndexPath(indexPath) {
       sectionHeaderView.title = title
+      sectionHeaderView.icon = UIImage(named: title)
     }
     return sectionHeaderView
   }

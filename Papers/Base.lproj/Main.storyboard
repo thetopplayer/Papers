@@ -91,19 +91,29 @@
                             <autoresizingMask key="autoresizingMask"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMr-wv-KMb">
-                                    <rect key="frame" x="8" y="8" width="584" height="34"/>
+                                    <rect key="frame" x="50" y="8" width="542" height="34"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="XZk-0K-ZOU">
+                                    <rect key="frame" x="8" y="8" width="34" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="34" id="6Gd-OJ-w9q"/>
+                                        <constraint firstAttribute="width" constant="34" id="dX5-54-cr2"/>
+                                    </constraints>
+                                </imageView>
                             </subviews>
                             <constraints>
-                                <constraint firstItem="PMr-wv-KMb" firstAttribute="leading" secondItem="BIZ-eB-9Za" secondAttribute="leading" constant="8" id="Aw7-f3-5ba"/>
-                                <constraint firstAttribute="trailing" secondItem="PMr-wv-KMb" secondAttribute="trailing" constant="8" id="Eya-SY-KYL"/>
-                                <constraint firstAttribute="bottom" secondItem="PMr-wv-KMb" secondAttribute="bottom" constant="8" id="cfq-Q7-Fqm"/>
-                                <constraint firstItem="PMr-wv-KMb" firstAttribute="top" secondItem="BIZ-eB-9Za" secondAttribute="top" constant="8" id="xFf-Lv-hr6"/>
+                                <constraint firstAttribute="bottom" secondItem="PMr-wv-KMb" secondAttribute="bottom" constant="8" id="0g8-u6-0gf"/>
+                                <constraint firstItem="PMr-wv-KMb" firstAttribute="top" secondItem="BIZ-eB-9Za" secondAttribute="top" constant="8" id="7rs-8w-vs3"/>
+                                <constraint firstItem="PMr-wv-KMb" firstAttribute="leading" secondItem="XZk-0K-ZOU" secondAttribute="trailing" constant="8" id="CZg-SZ-sh8"/>
+                                <constraint firstAttribute="trailing" secondItem="PMr-wv-KMb" secondAttribute="trailing" constant="8" id="Msx-v0-55b"/>
+                                <constraint firstAttribute="centerY" secondItem="XZk-0K-ZOU" secondAttribute="centerY" id="ZxH-75-BsG"/>
+                                <constraint firstItem="XZk-0K-ZOU" firstAttribute="leading" secondItem="BIZ-eB-9Za" secondAttribute="leading" constant="8" id="iSf-uc-RnS"/>
                             </constraints>
                             <connections>
+                                <outlet property="iconImageView" destination="XZk-0K-ZOU" id="Oc2-iw-QnZ"/>
                                 <outlet property="titleLabel" destination="PMr-wv-KMb" id="UZA-Lf-WXP"/>
                             </connections>
                         </collectionReusableView>
