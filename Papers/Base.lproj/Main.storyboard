@@ -38,26 +38,28 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="6WX-W2-okh">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PaperCell" id="6WX-W2-okh" customClass="PaperCell" customModule="Papers" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                     <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fwq-vU-Agp">
-                                            <rect key="frame" x="2" y="2" width="196" height="196"/>
-                                            <color key="backgroundColor" red="0.0" green="0.40784313729999999" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        </view>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mqB-0w-F1D">
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                        </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <constraints>
-                                    <constraint firstItem="Fwq-vU-Agp" firstAttribute="leading" secondItem="6WX-W2-okh" secondAttribute="leading" constant="2" id="8ee-Ci-UzN"/>
-                                    <constraint firstAttribute="bottom" secondItem="Fwq-vU-Agp" secondAttribute="bottom" constant="2" id="Wl2-rh-z3z"/>
-                                    <constraint firstAttribute="trailing" secondItem="Fwq-vU-Agp" secondAttribute="trailing" constant="2" id="rzQ-iQ-B9v"/>
-                                    <constraint firstItem="Fwq-vU-Agp" firstAttribute="top" secondItem="6WX-W2-okh" secondAttribute="top" constant="2" id="zeU-i1-Sr8"/>
+                                    <constraint firstItem="mqB-0w-F1D" firstAttribute="top" secondItem="6WX-W2-okh" secondAttribute="top" id="6Kr-Lx-anc"/>
+                                    <constraint firstItem="mqB-0w-F1D" firstAttribute="leading" secondItem="6WX-W2-okh" secondAttribute="leading" id="TBd-K6-IRe"/>
+                                    <constraint firstAttribute="bottom" secondItem="mqB-0w-F1D" secondAttribute="bottom" id="pgs-Xw-bQ7"/>
+                                    <constraint firstAttribute="trailing" secondItem="mqB-0w-F1D" secondAttribute="trailing" id="zg7-fF-1E5"/>
                                 </constraints>
+                                <connections>
+                                    <outlet property="paperImageView" destination="mqB-0w-F1D" id="fbb-BW-maw"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
