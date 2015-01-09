@@ -66,6 +66,9 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="N8b-Ca-bid"/>
+                    <connections>
+                        <segue destination="ljD-dV-frr" kind="show" identifier="MasterToDetail" id="3kS-nS-iTX"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fic-66-PdS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

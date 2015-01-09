@@ -22,6 +22,13 @@ class MasterViewController: UICollectionViewController {
     layout.itemSize = CGSize(width: width, height: width)
   }
   
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if segue.identifier == "MasterToDetail" {
+      let detailViewController = segue.destinationViewController as DetailViewController
+      detailViewController.paper = sender as? Paper
+    }
+  }
+  
   // MARK: UICollectionViewDataSource
   
   override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -35,6 +42,14 @@ class MasterViewController: UICollectionViewController {
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCellWithReuseIdentifier("PaperCell", forIndexPath: indexPath) as UICollectionViewCell
     return cell
+  }
+  
+  // MARK: UICollectionViewDelegate
+  
+  override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    if let paper = papersDataSource.paperForItemAtIndexPath(indexPath) {
+      performSegueWithIdentifier("MasterToDetail", sender: paper)
+    }
   }
   
 }
