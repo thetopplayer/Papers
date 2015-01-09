@@ -32,11 +32,11 @@ class MasterViewController: UICollectionViewController {
   // MARK: UICollectionViewDataSource
   
   override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
-    return 1
+    return papersDataSource.numberOfSections
   }
   
   override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return papersDataSource.count
+    return papersDataSource.numberOfPapersInSection(section)
   }
   
   override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
@@ -45,6 +45,14 @@ class MasterViewController: UICollectionViewController {
       cell.paper = paper
     }
     return cell
+  }
+  
+  override func collectionView(collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, atIndexPath indexPath: NSIndexPath) -> UICollectionReusableView {
+    let sectionHeaderView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SectionHeader", forIndexPath: indexPath) as SectionHeaderView
+    if let title = papersDataSource.titleForSectionAtIndexPath(indexPath) {
+      sectionHeaderView.title = title
+    }
+    return sectionHeaderView
   }
   
   // MARK: UICollectionViewDelegate
