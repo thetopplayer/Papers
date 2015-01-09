@@ -15,6 +15,7 @@
 		7B10CFBC1A60511A002E8DF3 /* Paper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10CFBB1A60511A002E8DF3 /* Paper.swift */; };
 		7B10CFBE1A605136002E8DF3 /* PapersDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10CFBD1A605136002E8DF3 /* PapersDataSource.swift */; };
 		7B10CFC01A605167002E8DF3 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10CFBF1A605167002E8DF3 /* DetailViewController.swift */; };
+		7B10CFC21A605C4B002E8DF3 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B10CFC11A605C4B002E8DF3 /* MasterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		7B10CFBB1A60511A002E8DF3 /* Paper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paper.swift; sourceTree = "<group>"; };
 		7B10CFBD1A605136002E8DF3 /* PapersDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PapersDataSource.swift; sourceTree = "<group>"; };
 		7B10CFBF1A605167002E8DF3 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		7B10CFC11A605C4B002E8DF3 /* MasterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 			isa = PBXGroup;
 			children = (
 				7B10CFBF1A605167002E8DF3 /* DetailViewController.swift */,
+				7B10CFC11A605C4B002E8DF3 /* MasterViewController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -216,6 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B10CFC21A605C4B002E8DF3 /* MasterViewController.swift in Sources */,
 				7B10CFBC1A60511A002E8DF3 /* Paper.swift in Sources */,
 				7B10CF921A604F02002E8DF3 /* AppDelegate.swift in Sources */,
 				7B10CFBE1A605136002E8DF3 /* PapersDataSource.swift in Sources */,
