@@ -122,7 +122,13 @@
                             <outlet property="delegate" destination="nkU-Oh-jyk" id="0eE-rx-b5m"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="N8b-Ca-bid"/>
+                    <navigationItem key="navigationItem" id="N8b-Ca-bid">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Hsf-9r-AqS">
+                            <connections>
+                                <action selector="addButtonTapped:" destination="nkU-Oh-jyk" id="Ros-Cq-kig"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <segue destination="ljD-dV-frr" kind="show" identifier="MasterToDetail" id="3kS-nS-iTX"/>
                     </connections>
