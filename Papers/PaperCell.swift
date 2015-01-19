@@ -22,6 +22,15 @@ class PaperCell: UICollectionViewCell {
     }
   }
   
+  var moving: Bool = false {
+    didSet {
+      let alpha: CGFloat = moving ? 0.0 : 1.0
+      paperImageView.alpha = alpha
+      gradientView.alpha = alpha
+      captionLabel.alpha = alpha
+    }
+  }
+  
   override var selected: Bool {
     didSet {
       if editing {
@@ -36,6 +45,18 @@ class PaperCell: UICollectionViewCell {
         paperImageView.image = UIImage(named: paper.imageName)
         captionLabel.text = paper.caption
       }
+    }
+  }
+  
+  var snapshot: UIView {
+    get {
+      let snapshot = snapshotViewAfterScreenUpdates(true)
+      let layer = snapshot.layer
+      layer.masksToBounds = false
+      layer.shadowOffset = CGSize(width: -5.0, height: 0.0)
+      layer.shadowRadius = 5.0
+      layer.shadowOpacity = 0.4
+      return snapshot
     }
   }
   
